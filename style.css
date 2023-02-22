@@ -3,3 +3,7 @@
     font-family: 'Open Sans', monospace;
 }
 
+#gameButton {
+    margin: 20em auto;
+    display: block;
+}

@@ -1,16 +1,37 @@
-let minValue = parseInt(prompt('Минимальное знание числа для игры','-999'));
-let maxValue = parseInt(prompt('Максимальное знание числа для игры','999'));
-// условие для мин и макс (-999 и 999)
-minValue = (minValue <= -999) ? minValue = -999 : minValue; 
-maxValue = (maxValue >= 999) ? maxValue = 999 : maxValue;
-// условие NaN;
-if (isNaN(minValue) || isNaN(maxValue)) {
-    alert('Загадайте любое целое число от -99 до 99, а я его угадаю');
+document.getElementById("startGame").addEventListener('click', function(startGame) {
+    maxValue = parseInt(document.getElementById("maxValue").value);
+    minValue = parseInt(document.getElementById("minValue").value);
+    if (isNaN(minValue) || isNaN(maxValue)) {
+    // alert('Загадайте любое целое число от -99 до 99, а я его угадаю');
     minValue = -99;
     maxValue = 99;
-    } else {
-    alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
-}
+    // } else {
+    // alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
+    }
+       // условие для мин и макс (-999 и 999)
+    
+   minValue = (minValue <= -999) ? minValue = -999 : minValue; 
+   maxValue = (maxValue >= 999) ? maxValue = 999 : maxValue;
+})
+
+
+
+
+// let minValue = parseInt(prompt('Минимальное знание числа для игры','-999'));
+// let maxValue = parseInt(prompt('Максимальное знание числа для игры','999'));
+
+    // условие NaN;
+// if (isNaN(minValue) || isNaN(maxValue)) {
+//     alert('Загадайте любое целое число от -99 до 99, а я его угадаю');
+//     minValue = -99;
+//     maxValue = 99;
+//     } else {
+//     alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
+// }
+
+   // условие для мин и макс (-999 и 999)
+   minValue = (minValue <= -999) ? minValue = -999 : minValue; 
+   maxValue = (maxValue >= 999) ? maxValue = 999 : maxValue;
 
 let answerNumber  = Math.floor((minValue + maxValue) / 2);
 let orderNumber = 1;
@@ -151,10 +172,11 @@ document.getElementById('btnEqual').addEventListener('click', function () {
     if (phraseRandom <= 0.8) {
         answerPhrase = `Это число ${convertedNumbers(answerNumber)}? \n\u{1F913}`;
     } else if (phraseRandom >= 2.5) {
-        answerPhrase = `Ай какой я молодец ${convertedNumbers(answerNumber)} \n\u{1F913}`;
+        answerPhrase = `Ай какой я молодец \n\u{1F913}`;
     } else {
-        answerPhrase =`Похоже на маленькую победу ${convertedNumbers(answerNumber)}? \n\u{1F913}`;
+        answerPhrase =`Похоже на маленькую победу? \n\u{1F913}`;
     }
     answerField.innerText = answerPhrase;
     gameRun = false
 })
+
