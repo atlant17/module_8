@@ -1,4 +1,4 @@
-document.getElementById("startGame").addEventListener('click', function(startGame) {
+document.getElementById("startGame").addEventListener('click', function() {
     maxValue = parseInt(document.getElementById("maxValue").value);
     minValue = parseInt(document.getElementById("minValue").value);
     if (isNaN(minValue) || isNaN(maxValue)) {
@@ -8,30 +8,11 @@ document.getElementById("startGame").addEventListener('click', function(startGam
     // } else {
     // alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
     }
-       // условие для мин и макс (-999 и 999)
-    
+    // условие для мин и макс (-999 и 999)
    minValue = (minValue <= -999) ? minValue = -999 : minValue; 
    maxValue = (maxValue >= 999) ? maxValue = 999 : maxValue;
-})
 
 
-
-
-// let minValue = parseInt(prompt('Минимальное знание числа для игры','-999'));
-// let maxValue = parseInt(prompt('Максимальное знание числа для игры','999'));
-
-    // условие NaN;
-// if (isNaN(minValue) || isNaN(maxValue)) {
-//     alert('Загадайте любое целое число от -99 до 99, а я его угадаю');
-//     minValue = -99;
-//     maxValue = 99;
-//     } else {
-//     alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
-// }
-
-   // условие для мин и макс (-999 и 999)
-   minValue = (minValue <= -999) ? minValue = -999 : minValue; 
-   maxValue = (maxValue >= 999) ? maxValue = 999 : maxValue;
 
 let answerNumber  = Math.floor((minValue + maxValue) / 2);
 let orderNumber = 1;
@@ -179,4 +160,16 @@ document.getElementById('btnEqual').addEventListener('click', function () {
     answerField.innerText = answerPhrase;
     gameRun = false
 })
+})
+
+// let toastTrigger = document.getElementById("promptChange");
+// let toastLiveExample = document.getElementById("exampleModal")
+// if (toastTrigger) {
+//  toastTrigger.addEventListener('click', () => {
+//    const toast = new bootstrap.Toast(toastLiveExample)
+
+//    toast.show()
+//  })
+// }
+
 

@@ -35,15 +35,31 @@
                   </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary" id="startGame" data-bs-dismiss="modal">Начать игру</button>
-              <!-- <button type="button" id="startGame" class="btn btn-primary">Начать игру</button> -->
+              <button type="button" class="btn btn-primary" id="startGame" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" >Начать игру</button>
+              <!-- <button type="button" id="startGame" class="btn btn-primary">Начать игру</button>    data-bs-dismiss="modal"-->
             </div>
           </div>
         </div>
     </div>
-    
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Так не пойдет...</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+              Загадайте число от -99 до 99
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" id="promptChange" data-bs-dismiss="modal">Далее</button>
+              <button type="button" class="btn btn-primary">Сохранить изменения</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
       <!-- игровая карточка -->
-    <div class="container">
+    <div class="container collapse" id="collapseExample">
         <div class="row game-card align-items-center">
             <div class="col col-md-4 offset-md-4">
                 <div class="card text-center">
@@ -71,9 +87,6 @@
             </div>
         </div>
     </div>
-
-    <!--<div id="liveAlertPlaceholder"></div>
-    <button type="button" class="btn btn-primary" id="liveAlertBtn">Показать живое уведомление</button> -->
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

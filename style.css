@@ -1,9 +1,11 @@
 .game-card {
     height: 100vh;
     font-family: 'Open Sans', monospace;
+    margin-top: -30em;
 }
 
 #gameButton {
-    margin: 20em auto;
+    margin: 15em auto;
     display: block;
 }
+
